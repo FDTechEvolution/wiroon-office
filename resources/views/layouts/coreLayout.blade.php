@@ -22,7 +22,7 @@
 
 
     <!-- Smarty Style -->
-    <link href="{{ asset('css/smarty_style/core.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/smarty_style/core.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/smarty_style/vendor_bundle.min.css') }}" rel="stylesheet">
     <!-- up to 10% speed up for external res -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
@@ -57,7 +57,6 @@
     @yield('modal')
 
     <script src="{{ asset('js/smarty_js/core.min.js') }}"></script>
-    <script src="{{ asset('js/myapp.js') }}"></script>
 
     @yield('script')
 </body>

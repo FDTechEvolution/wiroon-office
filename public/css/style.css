@@ -2,3 +2,47 @@ img.navbar-logo-wiroon {
     max-width: 100%;
     height: auto;
 }
+
+.modal-dialog.modal-dialog-centered.modal-size-40 {
+    max-width: 40%;
+}
+
+.modal-dialog.modal-dialog-centered.modal-size-60 {
+    max-width: 60%;
+}
+
+.modal-dialog.modal-dialog-centered.modal-size-80 {
+    max-width: 80%;
+}
+
+.btn-v-sm {
+    padding: 3px 10px !important;
+    font-size: 0.9rem !important;
+}
+
+.btn-vv-sm {
+    padding: 2px 5px !important;
+    font-size: 0.7rem !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+ul#item-list {
+    list-style-type:decimal;
+}
+
+.lh--16 {
+    line-height: 16px !important;
+}
+
+.width-90-center {
+    width: 90% !important;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+}
+
+.border-3 {
+    border-width: 3px;
+}

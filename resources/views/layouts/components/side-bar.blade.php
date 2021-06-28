@@ -8,7 +8,7 @@
         <div class="clearfix d-flex justify-content-between">
 
             <!-- Logo : height: 60px max -->
-            <a class="w-100 align-self-center navbar-brand p-3" href="index.html">
+            <a class="w-100 align-self-center navbar-brand p-3" href="{{ url('/dashboard') }}">
                 <img src="{{ asset('images/logo/wiroon_logo-name_v2.webp') }}" class="navbar-logo-wiroon" width="350" height="75" alt="...">
             </a>
 
@@ -42,13 +42,44 @@
         <nav class="nav-deep nav-deep-dark nav-deep-hover pb-5">
             <ul class="nav flex-column">
 
-                <li class="nav-item active">
-                    <a class="nav-link js-ajax" href="index.html">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/dashboard') }}">
                         <i class="fi fi-menu-dots"></i>
                         <b>Dashboard</b>
                     </a>
                 </li>
 
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <span class="group-icon float-end">
+                            <i class="fi fi-arrow-end-slim"></i>
+                            <i class="fi fi-arrow-down-slim"></i>
+                        </span>
+                        <i class="fi fi-squared-info"></i>
+                        Unnamed
+                    </a>
+                
+                    <ul class="nav flex-column fs--15">
+
+                        <li class="nav-item pl-3 active">
+                            <a class="nav-link" href="{{ url('/customers') }}">
+                                <i class="fi fi-users"></i> <b>Customers</b>
+                            </a>
+                        </li>
+
+                        <li class="nav-item pl-3">
+                            <a class="nav-link" href="{{ url('/providers') }}">
+                                <i class="fi fi-like"></i> <b>Providers</b>
+                            </a>
+                        </li>
+
+                        <li class="nav-item pl-3">
+                            <a class="nav-link" href="{{ url('/projects') }}">
+                                <i class="fi fi-folder-full"></i> <b>Projects</b>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="#">
