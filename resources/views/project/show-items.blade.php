@@ -28,6 +28,13 @@
                         <td class="text-center py-2">{{ number_format($item->amount) }}</td>
                         <td class="text-center py-2">@if($item->description != '') {{ $item->description }} @else - @endif</td>
                         <td class="text-center py-2">
+
+                            <a class="text-truncate mr-3" href="#!" id="edit-project-item-btn_{{ $index }}" title="แก้ไขโปรเจค" data-toggle="modal" data-target="#projectEditItemModal"
+                                onClick="setDataItemEdit({{ $item->id }}, '{{ $item->name }}', '{{ $item->type }}', {{ $item->provider->id }}, {{ $item->amount }}, '{{ $item->description }}')"
+                            >
+                                <i class="fi fi-pencil text-success"></i>
+                            </a>
+
                             <a	href="#!" 
                                 class="text-truncate js-ajax-confirm" 
                                 data-href="/projects/delete-item/{{ $item->id }}"

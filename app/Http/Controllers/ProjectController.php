@@ -126,6 +126,31 @@ class ProjectController extends Controller
         return redirect()->back()->with('error', 'Add new item failed.');
     }
 
+    public function editItem(Request $request)
+    {
+        $item = $this->findByItemId($request->item_id);
+        $project = $this->findById($item->project_id);
+        
+        $new_amount = $item->amount != $request->item_amount ? $request->item_amount : $item->amount;
+        $new_totalamt = ($project->totalamt - $item->amount) + $new_amount;
+
+        $item->update([
+            'name' => $request->item_name,
+            'type' => $request->item_type,
+            'provider' => $request->item_provider,
+            'amount' => $new_amount,
+            'description' => $request->item_description
+        ]);
+
+        $project->update([
+            'totalamt' => $new_totalamt
+        ]);
+        
+        if($item && $project) return redirect()->back()->with('success', 'Update item project '. $project->name.' successed.');
+
+        return redirect()->back()->with('error', 'Update item project '. $project->name.' failed.');
+    }
+
 
 
     private function createProjectItem($project_item, $project_id)

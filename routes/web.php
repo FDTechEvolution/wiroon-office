@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/', [ProjectController::class, 'create']);
         Route::post('/edit', [ProjectController::class, 'edit']);
         Route::post('/add-item', [ProjectController::class, 'addNewItem']);
+        Route::post('/edit-item', [ProjectController::class, 'editItem']);
         Route::get('/delete-item/{item_id}', [ProjectController::class, 'deleteItem']);
         Route::get('/status/{status}/{id}', [ProjectController::class, 'projectStatus']);
     });

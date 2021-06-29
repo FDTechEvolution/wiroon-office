@@ -141,7 +141,7 @@
                                                 <i class="fi fi-pencil text-success"></i>
                                             </a>
 
-                                            <a class="text-truncate mr-3" title="รายการไอเทม" data-toggle="collapse" href="#collapseProject_{{ $key }}" role="button" aria-expanded="false" aria-controls="collapseProject_{{ $key }}">
+                                            <a class="text-truncate mr-3" id="main-project_{{ $key }}" title="รายการไอเทม" data-toggle="collapse" href="#collapseProject_{{ $key }}" role="button" aria-expanded="false" aria-controls="collapseProject_{{ $key }}">
                                                 <i class="fi fi-task-list"></i>
                                             </a>
 
@@ -244,6 +244,7 @@
     @include('project.modal.add')
     @include('project.modal.edit')
     @include('project.modal.add-item')
+    @include('project.modal.edit-item')
 @endsection
 
 @section('script')

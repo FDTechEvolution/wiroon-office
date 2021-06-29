@@ -12,7 +12,7 @@ function createNewItem() {
 function cancelNewItem() {
     document.querySelector('#create-project-item').style.display = 'none'
     document.querySelector('#project-item-list').style.display = 'block'
-    
+
     document.querySelector('#item-name').setAttribute("class", "form-control")
     document.querySelector('#item-type').setAttribute("class", "form-control")
     document.querySelector('#item-provider').setAttribute("class", "form-control")
@@ -127,6 +127,15 @@ function setDataEditProject(key) {
     document.querySelector('.edit-end').value = convertFormatDate(elem.dataset.enddate)
     document.querySelector('#edit-description').value = elem.dataset.description
     document.querySelector('#edit-project-id').value = elem.dataset.id
+}
+
+function setDataItemEdit(id, name, type, provider, amount, description) {
+    document.querySelector('#edit-item-name').value = name
+    document.querySelector('#edit-item-type').value = type
+    document.querySelector('#edit-item-provider').value = provider
+    document.querySelector('#edit-item-amount').value = amount
+    document.querySelector('#edit-item-description').value = description
+    document.querySelector('#project-id_edit-item').value = id
 }
 
 function convertFormatDate(date) {
