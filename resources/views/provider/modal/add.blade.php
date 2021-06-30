@@ -30,6 +30,7 @@
                                 <option value="hosting">Hosting</option>
                                 <option value="email">Email</option>
                                 <option value="design">Design</option>
+                                <option value="support">support</option>
                             </select>
                         </div>
                     </div>
