@@ -22,7 +22,7 @@ class ProjectController extends Controller
 
     public function index()
     {
-        $projects = Project::with('items', 'customer')->orderBy('created_at', 'DESC')->paginate(20);
+        $projects = Project::with('items', 'customer')->orderBy('enddate', 'ASC')->paginate(20);
         $customers = Customer::where('status', 'CO')->get();
         $providers = Provider::where('status', 'CO')->get();
 
@@ -38,7 +38,7 @@ class ProjectController extends Controller
             'startdate' => $this->convertDateFormat($request->startdate),
             'enddate' => $this->convertDateFormat($request->enddate),
             'totalamt' => 0,
-            'status' => 'INACTIVE',
+            'status' => 'ACTIVE',
             'description' => $request->description
         ]);
 

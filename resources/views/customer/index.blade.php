@@ -107,7 +107,7 @@
                                         <td class="text-align-end d-flex">
 
                                             <a class="text-truncate mr-4" href="#!" title="แก้ไข" data-toggle="modal" data-target="#customerEditModal"
-                                                onClick="setDataEditCustomer({{ $customer->id }})"
+                                                onClick="setDataEditCustomer({{ $customer->id }}, {{ $key }})"
                                             >
                                                 <i class="fi fi-pencil"></i>
                                             </a>

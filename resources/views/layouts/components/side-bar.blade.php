@@ -56,7 +56,7 @@
                             <i class="fi fi-arrow-down-slim"></i>
                         </span>
                         <i class="fi fi-squared-info"></i>
-                        Unnamed
+                        IS Department
                     </a>
                 
                     <ul class="nav flex-column fs--15">
